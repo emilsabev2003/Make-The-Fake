@@ -1,8 +1,8 @@
-class Play extends Phaser.Scene 
+class TrickIndex extends Phaser.Scene 
 {
     constructor()
     {
-        super('playScene')
+        super('trickIndexScene')
         /*
         this.timeAlive = 0
         this.isJumping = false
@@ -15,20 +15,13 @@ class Play extends Phaser.Scene
 
     preload()
     {
-        this.load.image("play_background", "./assets/play_background.png")
+        this.load.image("trickindex_background", "./assets/trickBackground.png")
     }
 
     create() 
     {
-        const tricks = 
-        {
-            "360_side_flip": ["D", "W", "A", "S"],
-            "head_stand": ["F, R, E, T"],
-            "sexy_move": ["Q", "Q", "Q", "Q"]
-        }
-
-        this.backgroundImage = this.add.tileSprite(0, 0, 800, 600, "play_background").setOrigin(0, 0)
-
+        this.backGroundImage = this.add.tileSprite(0, 0, 800, 600, "trickindex_background").setOrigin(0, 0)
+        this.returnMenu = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.M)
 
         /*
         //add background image to scene
@@ -97,9 +90,12 @@ class Play extends Phaser.Scene
         */
     }
 
-    update() //check collisions, game over, movement/animation 
+    update() 
     {
-        this.backgroundImage.tilePositionX += 3
+        if (this.returnMenu.isDown)
+        {
+                    this.scene.start("menuScene")
+        }
     }
 
 }

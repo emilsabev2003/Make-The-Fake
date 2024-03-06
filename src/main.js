@@ -23,7 +23,7 @@ let config =
             debug: true
         }
     },
-    scene: [ Menu, Play, GameOver ]
+    scene: [ Menu, Play, GameOver, TrickIndex ]
 }
 
 let game = new Phaser.Game(config)
