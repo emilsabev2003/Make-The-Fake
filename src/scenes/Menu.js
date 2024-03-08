@@ -3,6 +3,7 @@ class Menu extends Phaser.Scene
     constructor() 
     {
         super('menuScene')
+        this.menuMusicOn = false
     }
 
     preload() //load images, audio, sprites here
@@ -28,14 +29,18 @@ class Menu extends Phaser.Scene
         })
 
         this.menuMusic = this.sound.add('menu_music')
-        this.menuMusic.play({loop: true})
-        this.menuMusic.setVolume(0.05)
-
         this.playMusic = this.sound.add('play_music')
+        this.menuMusic.setVolume(0.05)
     }
 
     update() //transition from menu to play
     {
+        if (!this.menuMusicOn)
+        {
+            this.menuMusic.play({loop: true})
+            this.menuMusicOn = true
+        }
+
         if (this.startGame.isDown)
         {
             this.menuMusic.stop()

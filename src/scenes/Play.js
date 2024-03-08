@@ -99,7 +99,7 @@ class Play extends Phaser.Scene
         //check for user keyboard input for tricking
         if (this.biker.y < 470)
         {
-            if (this.keySequence === 'FRET' && this.elapsedTime - this.lastKeyPressTime <= 500)
+            if (this.keySequence === 'DWAS' && this.elapsedTime - this.lastKeyPressTime <= 500)
             {
                 this.trickWind.x = 0
                 this.trickWind.y = 0
