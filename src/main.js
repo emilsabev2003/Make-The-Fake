@@ -4,8 +4,11 @@
 // Approx Hours Spent: 
 
 
-// Credits: 
+/* Credits: 
+background menu/trick index scene music: https://pixabay.com/music/beats-weeknds-122592/
 
+
+*/
 'use strict'
 
 let config = 
