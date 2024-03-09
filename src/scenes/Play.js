@@ -99,7 +99,7 @@ class Play extends Phaser.Scene
         this.elapsedTime = this.time.now
 
         //move trick wind by -3.5
-        this.trickWind.x -= 3.5
+        this.trickWind.x -= 6.5
 
         //wrap screen if necessary
         if (this.trickWind.x > this.game.config.width) 
@@ -110,7 +110,7 @@ class Play extends Phaser.Scene
         //3 second stationary background to start the game
         if (this.elapsedTime > 3050) 
         {
-            this.backgroundImage.tilePositionX += 2.5 + (this.elapsedTime / 100000 - 0.005)
+            this.backgroundImage.tilePositionX += 5
         }
 
         //check for user keyboard input for tricking
