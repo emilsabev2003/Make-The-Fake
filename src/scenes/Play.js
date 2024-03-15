@@ -62,6 +62,9 @@ class Play extends Phaser.Scene
             "sexy_move": ["Q", "Q", "Q", "Q"]
         }
 
+        this.points = 
+        
+
         //360-side-flip animations
         this.anims.create
         ({
