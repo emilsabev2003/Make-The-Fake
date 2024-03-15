@@ -34,8 +34,8 @@ class Menu extends Phaser.Scene
 
         if (this.startGame.isDown)
         {
-            this.playMusic.play({loop: true})
-            this.playMusic.setVolume(0.1)
+            //this.playMusic.play({loop: true})
+            //this.playMusic.setVolume(0.1)
             this.scene.start("playScene")
         }
 
