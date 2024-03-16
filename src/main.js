@@ -37,7 +37,7 @@ let config =
         arcade: 
         {
             gravity: { y: 500}, 
-            debug: true
+            debug: false
         }
     },
     scene: [ Menu, Play, GameOver, TrickIndex ]
