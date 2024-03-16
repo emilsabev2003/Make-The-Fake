@@ -19,11 +19,14 @@ class Menu extends Phaser.Scene
         this.startGame = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.P)
         this.trickIndex = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.T)
 
+        let highScore = 500
+        this.game.highScore = highScore
+
         this.anims.create
         ({
             key: 'rampAnims',
-            frames: this.anims.generateFrameNames('bike_ramp_anims', {prefix: "bike_ramp_", start: 1, end: 7, suffix: ".png"}),
-            frameRate: 5
+            frames: this.anims.generateFrameNames('bike_ramp_anims', {prefix: "bike_ramp_", start: 1, end: 8, suffix: ".png"}),
+            frameRate: 6
         })
 
         this.playMusic = this.sound.add('play_music')
@@ -34,8 +37,8 @@ class Menu extends Phaser.Scene
 
         if (this.startGame.isDown)
         {
-            //this.playMusic.play({loop: true})
-            //this.playMusic.setVolume(0.1)
+            this.playMusic.play({loop: true})
+            this.playMusic.setVolume(0.1)
             this.scene.start("playScene")
         }
 
